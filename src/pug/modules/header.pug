@@ -1,1 +1,21 @@
 // HEADER
+header.header#header
+
+  // NAV CONTAINER
+  nav.nav.container
+    a.nav__logo(href="#")
+      i.ri-steering-line
+      |Elecar
+
+    // NAV MENU
+    .nav__menu#nav-menu
+      ul.nav__list
+        each link in navLinks
+          li.nav__item
+            a.nav__link(href=`#${link.toLowerCase()}`)= link
+
+      .nav__close#nav-close
+        i.ri-close-line
+
+    .nav__toggle#nav-toggle
+      i.ri-menu-line
