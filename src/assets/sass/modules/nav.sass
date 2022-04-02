@@ -1,1 +1,69 @@
+// Modules
+
+// plugins
+@use '../plugins/plugins-dir' as plugins
+
+// base-lib 
+@use '../base/base-lib'
+
 /* NAV
+
+.nav
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: var(--header-height)
+
+.nav__logo,
+.nav__toggle
+  display: inline-flex
+  color: var(--title-color)
+
+.nav__logo
+  align-items: center
+  column-gap: .25rem
+  font-weight: var(--font-medium)
+  transition: .3s
+
+  &:hover
+    color: var(--first-color)
+
+.nav__logo i
+  font-size: 1.25rem
+
+.nav__toggle
+  font-size: 1.25rem
+  cursor: pointer
+
+.nav__menu
+  +base-lib.breakpoint($br: base-lib.$md, $media-feature: 'max-width')
+    +plugins.size(100%)
+    background-color: hsla(0, 0%, 100%, .1)
+    +plugins.prefixer(backdrop-filter, blur(96px), ('webkit'))
+    +plugins.position(fixed, 0 -100% null null)
+    transition: .3s
+    overflow: hidden
+
+.nav__list
+  display: flex
+  flex-direction: column
+  row-gap: 3rem
+  +plugins.padding(9rem null null)
+  text-align: center
+
+.nav__link
+  text-transform: uppercase
+  font:
+    size: var(--h2-font-size)
+    weight: var(--font-medium) 
+  color: var(--title-color)
+  transition: .3s
+
+  &:hover
+    color: var(--first-color)
+
+.nav__close
+  font-size: 2rem
+  color: var(--white-color)
+  +plugins.position(absolute, 1rem 1rem null null)
+  cursor: pointer
