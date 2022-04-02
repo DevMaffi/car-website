@@ -1,0 +1,30 @@
+// HOME
+section.home.section#home
+
+  // HOME CONTAINER 
+  .home__container.container.grid
+
+    // HOME DATA
+    .home__data
+      h1.home__title Choose The Best Car
+
+      h2.home__subtitle Porsche Mission E
+
+      h3.home__elec
+        i.ri-flashlight-fill
+        |Electric car
+
+    img.home__img(src="@img/home.png", alt="🏡")
+
+    // HOME CAR
+    .home__car
+      each car in carData
+        .home__car-data
+          .home__car-icon
+            i(class=`${car.icon}`)
+
+          h2.home__car-number= car.number
+
+          h3.home__car-name= car.name
+
+    a.home__button(href="#") START
