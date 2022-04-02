@@ -4,7 +4,7 @@
 @use '../plugins/plugins-dir' as plugins
 
 // base-lib 
-@use '../base/base-lib'
+@use '../base/media-lib'
 
 /* NAV
 
@@ -36,7 +36,7 @@
   cursor: pointer
 
 .nav__menu
-  +base-lib.breakpoint($br: base-lib.$md, $media-feature: 'max-width')
+  +media-lib.breakpoint($br: media-lib.$md, $media-feature: 'max-width')
     +plugins.size(100%)
     background-color: hsla(0, 0%, 100%, .1)
     +plugins.prefixer(backdrop-filter, blur(96px), ('webkit'))
