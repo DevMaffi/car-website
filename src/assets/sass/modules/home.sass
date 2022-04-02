@@ -1,0 +1,99 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
+/* HOME
+
+.home
+  position: relative
+  overflow: hidden
+
+.home__container
+  row-gap: 3rem
+  +plugins.padding(4rem null null)
+  position: relative
+
+.home__data
+  text-align: center
+
+.home__title
+  +plugins.margin(null null 1rem)
+  font-size: var(--h1-font-size)
+
+.home__subtitle
+  +plugins.margin(null null .25rem)
+  font-size: var(--h3-font-size)
+
+.home__elec
+  display: inline-flex
+  align-items: center
+  column-gap: .25rem
+  font:
+    size: var(--small-font-size)
+    weight: 400
+  color: var(--text-color)
+
+.home__elec i 
+  color: var(--first-color)
+
+.home__img
+  justify-self: center
+  width: 280px
+
+.home__car
+  display: flex
+  justify-content: center
+  align-items: center
+  column-gap: 4rem
+  +plugins.margin(null null 2rem)
+
+.home__car-data
+  text-align: center
+
+.home__car-icon
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  +plugins.margin(null null .75rem)
+  +plugins.padding(.367rem)
+  background-color: var(--container-color)
+  border-radius: 50%
+  font-size: .875rem
+
+.home__car-number
+  +plugins.margin(null null .25rem)
+  font:
+    size: var(--h2-font-size)
+    weight: var(--font-medium)
+
+.home__car-name
+  font:
+    size: .625rem
+    weight: 400
+  color: var(--text-color-light)
+
+.home__button
+  display: flex
+  justify-self: center
+  justify-content: center
+  align-items: center
+  +plugins.size(70px)
+  border: 2px solid hsl(158, 89%, 30%)
+  border-radius: 50%
+  font:
+    size: var(--small-font-size)
+    weight: var(--font-medium)
+  color: var(--white-color)
+  position: relative
+
+  &:before
+    $green: hsl(158, 98%, 43%)
+
+    content: ''
+    +plugins.size(90px)
+    border: 2px solid $green
+    border-radius: 50%
+    box-shadow: 0 0 12px $green
+    position: absolute
+    transition: .3s
+    animation: button 3s infinite
