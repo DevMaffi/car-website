@@ -1,4 +1,14 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
 /* MICRO CLASSES
+
+// change background header
+.scroll-header
+  +plugins.border-bottom-radius(1rem)
+  background-color: var(--body-color)
+  box-shadow: 0 2px 4px hsla(0, 0%, 1%, 1)
 
 .show-menu
   right: 0
