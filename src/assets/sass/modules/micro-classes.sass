@@ -12,3 +12,14 @@
 
 .show-menu
   right: 0
+
+.hide-svg
+  +plugins.size(0)
+  +plugins.position(absolute, 0 0 null null)
+
+.blurred-content
+  @supports not (backdrop-filter: blur())
+    +plugins.position(absolute, 0 0 null)
+    filter: url(#blur-effect)
+    z-index: -1
+    opacity: .9
