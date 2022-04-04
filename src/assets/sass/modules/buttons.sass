@@ -1,1 +1,17 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
 /* BUTTONS
+
+.button
+  display: inline-block
+  +plugins.padding(1rem 2rem)
+  background-color: var(--first-color)
+  border-radius: .25rem
+  font-size: var(--normal-font-size)
+  color: var(--white-color)
+  transition: .3s
+
+  &:hover
+    background-color: var(--first-color-alt)

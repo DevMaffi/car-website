@@ -1,0 +1,44 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
+/* ABOUT
+
+.about__container
+  row-gap: 6rem
+
+.about__group
+  position: relative
+
+.about__img
+  width: 310px
+  border-radius: .5rem
+
+.about__card
+  width: 180px
+  +plugins.padding(1rem .75rem)
+  border-radius: 1.25rem
+  text-align: center
+  +plugins.position(absolute, null 0 -2.5rem null)
+
+  @supports (backdrop-filter: blur())
+    background-color: hsla(0, 0%, 100%, .1)
+    +plugins.prefixer(backdrop-filter, blur(16px), ('webkit'))
+
+  @supports not (backdrop-filter: blur())
+    background-color: hsla(0, 0%, 100%, .1)
+    box-shadow: inset 0 0 50px hsla(219, 4%, 4%, .6)
+
+.about__card-title
+  +plugins.margin(null null .5rem)
+  font-size: var(--h3-font-size)
+
+.about__card-description
+  font-size: var(--smaller-font-size)
+
+.about__title
+  +plugins.margin(null null 2rem)
+  text-align: initial
+
+.about__description
+  +plugins.margin(null null 2rem)
