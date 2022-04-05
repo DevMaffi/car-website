@@ -1,0 +1,74 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
+/* POPULAR
+
+.popular__container
+  +plugins.padding(1rem null null)
+
+.popular__card
+  width: 238px
+  +plugins.margin(null null 3.5rem)
+  +plugins.padding(2rem 1.5rem 1.5rem)
+  background-color: var(--container-color)
+  border-radius: 1rem
+  position: relative
+  overflow: hidden
+
+  &:hover
+    .popular__img
+      transform: translateY(-.25rem)
+
+.popular__card .shape__smaller
+  +plugins.position(absolute, -2.5rem null null -2.5rem)
+
+.popular__title,
+.popular__subtitle,
+.popular__img
+  position: relative
+
+.popular__title
+  +plugins.margin(null null .25rem)
+  font-size: var(--h2-font-size)
+
+.popular__subtitle
+  font:
+    size: var(--normal-font-size)
+    weight: 400
+  color: var(--text-color)
+
+.popular__img
+  width: 160px
+  +plugins.margin(.75rem null 1.25rem 1.5rem)
+  transition: .3s
+
+.popular__data
+  display: grid
+  grid-template-columns: repeat(2, max-content)
+  gap: .5rem 1.25rem
+  +plugins.margin(null null 2rem)
+
+.popular__data-group
+  display: inline-flex
+  align-items: center
+  column-gap: .5rem
+  font-size: var(--small-font-size)
+  color: var(--white-color)
+
+.popular__data i
+  font-size: 1rem
+
+.popular__price
+  font-size: var(--h3-font-size)
+
+.popular__button
+  +plugins.padding(.75rem 1rem)
+  border: none
+  border-radius: 1rem 0 1rem
+  outline: none
+  +plugins.position(absolute, null 0 0 null)
+  cursor: pointer
+
+.popular__button i
+  font-size: 1.25rem
