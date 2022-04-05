@@ -1,0 +1,37 @@
+// POPULAR
+section.popular.section#popular(data-blur-target)
+  h2.section__title
+    |Choose Your Electric Car
+    br
+    |Of The Porsche Brand
+
+  // POPULAR CONTAINER
+  .popular__container.container
+
+    div
+      each card in popularCards
+        // POPULAR CARD
+        article.popular__card
+          .shape.shape__smaller
+
+          h1.popular__title= card.title
+          h3.popular__subtitle= card.subtitle
+
+          img.popular__img(src=`@img/${card.img}`, alt="popular")
+
+          // POPULAR DATA
+          .popular__data
+            .popular__data-group
+              i.ri-dashboard-3-line
+              |3.7 Sec
+            .popular__data-group
+              i.ri-funds-box-line
+              |356 Km/h
+            .popular__data-group
+              i.ri-charging-pile-2-line
+              |Electric
+
+          h3.popular__price= card.price
+
+          button.button.popular__button
+            i.ri-shopping-bag-2-line
