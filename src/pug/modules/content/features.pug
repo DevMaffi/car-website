@@ -1,0 +1,16 @@
+// FEATURES
+section.features.section
+  h2.section__title More Features
+
+  // FEATURES CONTAINER
+  .features__container.container.grid
+    .features__group
+      img.features__img(src="@img/features.png", alt="features")
+
+      each card, i in featuresCards
+        // FEATURES CARD
+        div(class=`.features__card.features__card-${i + 1}`)
+          h3.features__card-title= card.title
+          p.features__card-description !{card.descr}
+
+  img.features__map(src="@svg/map.svg", alt="map")
