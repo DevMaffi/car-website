@@ -1,1 +1,14 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
 // Placeholders
+
+%bg-blur
+  @supports (backdrop-filter: blur())
+    background-color: hsla(0, 0%, 100%, .1)
+    +plugins.prefixer(backdrop-filter, blur(16px), ('webkit'))
+
+  @supports not (backdrop-filter: blur())
+    background-color: hsla(0, 0%, 100%, .1)
+    box-shadow: inset 0 0 100px hsla(219, 4%, 7%, .4)

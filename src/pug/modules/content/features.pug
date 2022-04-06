@@ -1,5 +1,5 @@
 // FEATURES
-section.features.section
+section.features.section(data-blur-target)
   h2.section__title More Features
 
   // FEATURES CONTAINER
@@ -9,7 +9,7 @@ section.features.section
 
       each card, i in featuresCards
         // FEATURES CARD
-        div(class=`.features__card.features__card-${i + 1}`)
+        div(class=`features__card features__card-${i + 1}`)
           h3.features__card-title= card.title
           p.features__card-description !{card.descr}
 

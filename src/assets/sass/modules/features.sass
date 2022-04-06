@@ -1,0 +1,62 @@
+// Modules
+
+// plugins
+@use '../plugins/plugins-dir' as plugins
+
+// placeholders
+@use '../base/placeholders'
+
+/* FEATURES
+
+.features
+  position: relative
+  overflow: hidden
+
+.features__container
+  grid-template-columns: 285px
+  justify-content: center
+  +plugins.padding(2rem null null)
+
+.features__group
+  display: grid
+  position: relative
+  z-index: 10
+
+.features__img
+  justify-self: center
+  width: 150px
+
+.features__card
+  width: 112px
+  +plugins.padding(.75rem 2rem)
+  border-radius: 1.25rem
+  text-align: center
+  color: var(--title-color)
+  position: absolute
+
+  @extend %bg-blur
+
+.features__card-1
+  top: 4rem
+  left: 1.5rem
+
+.features__card-2
+  top: 8rem
+  right: 1rem
+
+.features__card-3
+  left: 1.5rem
+  bottom: 2rem
+
+.features__card-title
+  +plugins.margin(null null .25rem)
+  font-size: var(--h3-font-size)
+
+.features__card-description
+  font-size: var(--smaller-font-size)
+
+.features__map
+  max-width: initial
+  width: 450px
+  +plugins.position(absolute, 8rem null null -3rem)
+  transform: rotate(-22deg)
