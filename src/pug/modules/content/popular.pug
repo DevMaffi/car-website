@@ -6,12 +6,14 @@ section.popular.section#popular(data-blur-target)
     |Of The Porsche Brand
 
   // POPULAR CONTAINER
-  .popular__container.container
+  .popular__container.container.swiper
 
-    div
+    // SWIPER WRAPPER
+    .swiper-wrapper
       each card in popularCards
+
         // POPULAR CARD
-        article.popular__card
+        article.popular__card.swiper-slide
           .shape.shape__smaller
 
           h1.popular__title= card.title
@@ -35,3 +37,5 @@ section.popular.section#popular(data-blur-target)
 
           button.button.popular__button
             i.ri-shopping-bag-2-line
+
+    .swiper-pagination
