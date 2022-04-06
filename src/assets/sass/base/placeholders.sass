@@ -12,3 +12,25 @@
   @supports not (backdrop-filter: blur())
     background-color: hsla(0, 0%, 100%, .1)
     box-shadow: inset 0 0 100px hsla(219, 4%, 7%, .4)
+
+%card-title
+  +plugins.margin(null null .25rem)
+  font-size: var(--h2-font-size)
+
+%card-subtitle
+  font:
+    size: var(--normal-font-size)
+    weight: 400
+  color: var(--text-color)
+
+%card-price
+  font-size: var(--h3-font-size)
+
+%card-button
+  border: none
+  outline: none
+  +plugins.position(absolute, null 0 0 null)
+  cursor: pointer
+
+%card-button i
+  font-size: 1.25rem
