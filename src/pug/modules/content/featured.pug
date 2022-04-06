@@ -1,0 +1,34 @@
+// FEATURED
+section.featured.section#featured(data-blur-target)
+  h2.section__title Featured Luxury Cars
+
+  // FEATURED CONTAINER
+  .featured__container.container
+
+    // FEATURED FILTERS
+    ul.featured__filters
+      each filter in featuredFilters
+        li
+          button.featured__item
+            if filter.text
+              span #{filter.text}
+            else
+              img(src=`@img/${filter.img}`, alt="logo")
+
+    // FEATURED CONTENT
+    .featured__content.grid
+
+      each card in featuredCards
+        // FEATURED CARD
+        article.featured__card
+          .shape.shape__smaller
+
+          h1.featured__title= card.title
+          h3.featured__subtitle= card.subtitle
+
+          img.featured__img(src=`@img/${card.img}`, alt="featured")
+
+          h3.featured__price= card.price
+
+          button.button.featured__button
+            i.ri-shopping-bag-2-line
