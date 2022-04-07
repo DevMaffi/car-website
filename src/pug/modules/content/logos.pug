@@ -1,0 +1,10 @@
+// LOGOS
+section.logos.section(data-blur-target)
+
+  // LOGOS CONTAINER
+  .logos__container.container.grid
+
+    each logo in logoItems
+      // LOGOS CONTENT
+      .logos__content
+        img.logos__img(src=`@img/${logo.img}`, alt="logo")
