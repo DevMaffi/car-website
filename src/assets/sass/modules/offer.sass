@@ -1,0 +1,35 @@
+// Modules
+
+@use '../plugins/plugins-dir' as plugins
+
+/* OFFER
+
+.offer
+  position: relative
+
+.offer__container
+  grid-template-rows: max-content 224px
+
+.offer__bg
+  +plugins.size(100%)
+  object-fit: cover
+  object-position: center
+  +plugins.position(absolute, 0 null null 0)
+
+.offer__data,
+.offer__img
+  position: relative
+
+.offer__data
+  text-align: center
+
+.offer__title
+  +plugins.margin(null null 2rem)
+
+.offer__description
+  +plugins.margin(null null 3rem)
+
+.offer__img
+  max-width: initial
+  width: 400px
+  +plugins.position(absolute, null -5.5rem 2rem null)
