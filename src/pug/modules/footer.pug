@@ -1,1 +1,39 @@
 // FOOTER
+footer.section
+  .shape.shape__big
+  .shape.shape__small
+
+  // FOOTER CONTAINER
+  .footer__container.container.grid
+
+    +footerContent
+      a.footer__logo(href="#")
+        +logo
+
+      p.footer__description
+        |We offer the best electric cars of
+        br
+        |the most recognized brands in
+        br
+        |the world.
+
+    each section in footerSections
+      +footerContent
+        h3.footer__title= section.title
+
+        if section.links
+          // FOOTER LINKS
+          ul.footer__links
+            each link in section.links
+              li
+                a.footer__link(href="#")= link 
+
+        if section.social
+          // FOOTER SOCIAL
+          ul.footer__social
+            each link in section.social
+              a.footer__social-link(href=`${link.url}` target="_blank")
+                i(class=`${link.icon}`)
+
+  span.footer__copy
+    |© #{new Date().getFullYear()} Elecar. All rights reserved

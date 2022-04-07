@@ -12,3 +12,12 @@ mixin head({ title=projectName, favicon=faviconUrl } = {})
     block links
 
     title= title
+
+mixin logo
+  i.ri-steering-line 
+  |#{companyName}
+
+mixin footerContent
+  // FOOTER CONTENT
+  .footer__content
+    block
