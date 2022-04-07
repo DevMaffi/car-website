@@ -9,7 +9,7 @@ section.featured.section#featured(data-blur-target)
     ul.featured__filters
       each filter in featuredFilters
         li
-          button.featured__item
+          button.featured__item(data-filter=`${filter.type}`)
             if filter.text
               span #{filter.text}
             else
@@ -20,7 +20,7 @@ section.featured.section#featured(data-blur-target)
 
       each card in featuredCards
         // FEATURED CARD
-        article.featured__card
+        article(class=`featured__card mix ${card.category}`)
           .shape.shape__smaller
 
           h1.featured__title= card.title

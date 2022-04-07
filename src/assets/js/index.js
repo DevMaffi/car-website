@@ -2,6 +2,7 @@
 
 // modules
 import Swiper, { Pagination } from 'swiper'
+import mixitup from 'mixitup'
 
 import { handleScroll, handleMenu, applyBlur } from '@modules'
 
@@ -35,5 +36,16 @@ new Swiper('.popular__container', {
   breakpoints: {
     768: { slidesPerView: 3 },
     1024: { spaceBetween: 48 },
+  },
+})
+
+// Mixer init
+
+mixitup('.featured__content', {
+  selectors: {
+    target: '.featured__card',
+  },
+  animation: {
+    duration: 300,
   },
 })
