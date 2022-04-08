@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../base/media-lib'
 
 /* FOOTER
 
@@ -25,6 +29,10 @@
 .footer__container
   row-gap: 2.5rem
   position: relative
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    grid-template-columns: repeat(2, 1fr)
 
 .footer__logo
   display: inline-flex

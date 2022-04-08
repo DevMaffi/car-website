@@ -14,6 +14,10 @@
 .about__container
   row-gap: 6rem
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    grid-template-columns: repeat(2, 1fr)
+
 .about__group
   position: relative
 

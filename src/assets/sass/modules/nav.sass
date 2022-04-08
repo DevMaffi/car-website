@@ -3,7 +3,7 @@
 // plugins
 @use '../plugins/plugins-dir' as plugins
 
-// base-lib 
+// media lib 
 @use '../base/media-lib'
 
 /* NAV
@@ -13,6 +13,10 @@
   justify-content: space-between
   align-items: center
   height: var(--header-height)
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    height: calc(var(--header-height) + 1.5rem)
 
 .nav__logo,
 .nav__toggle
@@ -30,6 +34,12 @@
 
 .nav__logo i
   font-size: 1.25rem
+
+.nav__toggle,
+.nav__close
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    display: none
 
 .nav__toggle
   font-size: 1.25rem
@@ -56,6 +66,12 @@
   +plugins.padding(9rem null null)
   text-align: center
 
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    flex-direction: row
+    column-gap: 3rem
+    +plugins.padding(0 null null)
+
 .nav__link
   text-transform: uppercase
   font:
@@ -66,6 +82,11 @@
 
   &:hover
     color: var(--first-color)
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    font-size: var(--normal-font-size)
+    text-transform: initial
 
 .nav__close
   font-size: 2rem

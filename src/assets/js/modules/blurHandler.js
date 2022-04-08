@@ -24,38 +24,51 @@ function moveContainerOnScroll(container) {
 // Handle blur on navMenu
 
 function blurNavMenu() {
-  // select the html elements we want to blur
-  const blurTargets = document.querySelectorAll('[data-blur-target]')
+  const deviceCondition =
+    window.matchMedia('(max-width: 767px)').matches &&
+    !CSS.supports('backdrop-filter', 'blur()')
 
-  // create copies
-  const copies = [...blurTargets].map(target => target.cloneNode(true))
+  const blurredContainer = document.querySelector('.blurred-content')
 
-  // remove IDs on copies
-  copies.forEach(copy => removeIDs(copy))
+  if (!blurredContainer && deviceCondition) {
+    // select the html elements we want to blur
+    const blurTargets = document.querySelectorAll('[data-blur-target]')
 
-  // place it inside a container-div
-  const container = document.createElement('div')
+    // create copies
+    const copies = [...blurTargets].map(target => target.cloneNode(true))
 
-  // apply blurring svg effect to the container
-  container.classList.add('blurred-content')
+    // remove IDs on copies
+    copies.forEach(copy => removeIDs(copy))
 
-  // place copies inside the container
-  copies.forEach(duplicate => container.appendChild(duplicate))
+    // place it inside a container-div
+    const container = document.createElement('div')
 
-  // place container inside the nav menu
-  const navMenu = document.querySelector('#nav-menu')
-  navMenu.appendChild(container)
+    // apply blurring svg effect to the container
+    container.classList.add('blurred-content')
 
-  // apply scroll
-  moveContainerOnScroll(container)
+    // place copies inside the container
+    copies.forEach(duplicate => container.appendChild(duplicate))
+
+    // place container inside the nav menu
+    const navMenu = document.querySelector('#nav-menu')
+    navMenu.appendChild(container)
+
+    // apply scroll
+    moveContainerOnScroll(container)
+
+    return
+  }
+
+  if (blurredContainer && !deviceCondition) blurredContainer.remove()
 }
 
 // Apply blur effects
 
-function applyBlur() {
+function handleBlur() {
   blurNavMenu()
+  window.addEventListener('resize', blurNavMenu)
 }
 
 // Exports
 
-export default applyBlur
+export default handleBlur

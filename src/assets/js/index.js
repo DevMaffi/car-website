@@ -4,7 +4,7 @@
 import Swiper, { Pagination } from 'swiper'
 import mixitup from 'mixitup'
 
-import { handleScroll, handleMenu, applyBlur } from '@modules'
+import { handleScroll, handleMenu, handleBlur } from '@modules'
 
 // styles
 import 'swiper/css'
@@ -15,11 +15,7 @@ import '@sass/styles'
 
 handleScroll()
 handleMenu()
-
-// apply blur handler for browsers not support backdrop-filter
-if (!CSS.supports('backdrop-filter', 'blur()')) {
-  applyBlur()
-}
+handleBlur()
 
 // Swiper init
 

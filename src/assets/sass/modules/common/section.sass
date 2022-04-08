@@ -1,11 +1,19 @@
 // Modules
 
+// plugins
 @use '../../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../../base/media-lib'
 
 /* SECTION
 
 .section
   +plugins.padding(4.5rem null 2rem)
+
+  // medium devices
+  +media-lib.breakpoint($br: media-lib.$md)
+    +plugins.padding(7rem null 2rem)
 
 .section__title
   +plugins.margin(null null 2.5rem)
