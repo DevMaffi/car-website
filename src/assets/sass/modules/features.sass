@@ -6,6 +6,9 @@
 // placeholders
 @use '../base/placeholders'
 
+// media lib
+@use '../base/media-lib'
+
 /* FEATURES
 
 .features
@@ -60,3 +63,8 @@
   width: 450px
   +plugins.position(absolute, 8rem null null -3rem)
   transform: rotate(-22deg)
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    left: 50%
+    transform: translateX(-50%) rotate(-22deg)

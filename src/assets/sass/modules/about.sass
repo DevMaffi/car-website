@@ -17,6 +17,11 @@
 .about__group
   position: relative
 
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$sm)
+    width: 350px
+    justify-self: center
+
 .about__img
   width: 310px
   border-radius: .5rem
