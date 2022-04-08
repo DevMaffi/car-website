@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../base/media-lib'
 
 /* LOGOS
 
@@ -10,6 +14,10 @@
   align-items: center
   gap: 4rem
   +plugins.padding(null null 2rem)
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xsm, $media-feature: 'max-width')
+    gap: 2.5rem
 
 .logos__img
   width: 40px

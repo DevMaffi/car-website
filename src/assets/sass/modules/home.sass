@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../base/media-lib'
 
 /* HOME
 
@@ -59,6 +63,10 @@
   align-items: center
   column-gap: 4rem
   +plugins.margin(null null 2rem)
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xsm, $media-feature: 'max-width')
+    column-gap: 2rem
 
 .home__car-data
   text-align: center

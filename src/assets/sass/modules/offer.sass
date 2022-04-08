@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../base/media-lib'
 
 /* OFFER
 
@@ -9,6 +13,10 @@
 
 .offer__container
   grid-template-rows: max-content 224px
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xsm, $media-feature: 'max-width')
+    grid-template-rows: max-content 180px
 
 .offer__bg
   +plugins.size(100%)
@@ -33,3 +41,7 @@
   max-width: initial
   width: 400px
   +plugins.position(absolute, null -5.5rem 2rem null)
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xsm, $media-feature: 'max-width')
+    width: 340px

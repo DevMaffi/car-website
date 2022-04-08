@@ -6,6 +6,9 @@
 // placeholders
 @use '../base/placeholders'
 
+// media lib
+@use '../base/media-lib'
+
 /* ABOUT
 
 .about__container
@@ -26,6 +29,10 @@
   +plugins.position(absolute, null 0 -2.5rem null)
 
   @extend %bg-blur
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xsm, $media-feature: 'max-width')
+    width: 150px
 
 .about__card-title
   +plugins.margin(null null .5rem)

@@ -1,9 +1,17 @@
 // Modules
 
+// plugins
 @use '../../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../../base/media-lib'
 
 /* CONTAINER
 
 .container
   max-width: 1024px
   +plugins.margin(null 1.5rem)
+
+  // small devices
+  +media-lib.breakpoint($br: media-lib.$xsm, $media-feature: 'max-width')
+    +plugins.margin(null 1rem)
