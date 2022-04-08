@@ -1,0 +1,24 @@
+// Modules
+
+// plugins
+@use '../plugins/plugins-dir' as plugins
+
+// placeholders
+@use '../base/placeholders'
+
+/* SCROLL UP
+
+.scroll-up
+  display: inline-flex
+  +plugins.padding(.45rem)
+  border-radius: .5rem
+  font-size: 1.25rem
+  color: var(--white-color)
+  +plugins.position(fixed, null 1rem -30% null)
+  transition: .4s
+  z-index: var(--z-tooltip)
+  
+  @extend %bg-blur
+
+  &:hover
+    transform: translateY(-.25rem)
