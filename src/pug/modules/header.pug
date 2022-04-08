@@ -9,9 +9,9 @@ header.header#header(data-blur-target)
     // NAV MENU
     .nav__menu#nav-menu
       ul.nav__list
-        each link in navLinks
+        each link, i in navLinks
           li.nav__item
-            a.nav__link(href=`#${link.toLowerCase()}`)= link
+            a(class=`nav__link ${i === 0 ? "active-link" : ""}` href=`#${link.toLowerCase()}`)= link
 
       .nav__close#nav-close
         i.ri-close-line

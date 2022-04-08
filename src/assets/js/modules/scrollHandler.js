@@ -21,11 +21,37 @@ function showScrollUp() {
   return scrollUp.classList.remove('show-scroll')
 }
 
+// Handle links active class
+
+function handleActiveLink(section, scrollY) {
+  const sectionHeight = section.offsetHeight
+  const sectionTop = section.offsetTop - 58
+  const sectionId = section.getAttribute('id')
+  const sectionLink = document.querySelector(`.nav__menu a[href*=${sectionId}]`)
+
+  // when the scroll is within the section, add the active-link class to the corresponding nav link in the nav menu, otherwise, remove it
+  if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight)
+    return sectionLink.classList.add('active-link')
+
+  return sectionLink.classList.remove('active-link')
+}
+
+// Apply handler for each nav menu link
+
+// this refers to window
+function scrollActive() {
+  const sections = document.querySelectorAll('section[id]')
+  const scrollY = this.pageYOffset
+
+  sections.forEach(section => handleActiveLink(section, scrollY))
+}
+
 // Add event handlers on window
 
 function handleScroll() {
   window.addEventListener('scroll', scrollHeader)
   window.addEventListener('scroll', showScrollUp)
+  window.addEventListener('scroll', scrollActive)
 }
 
 // Exports
