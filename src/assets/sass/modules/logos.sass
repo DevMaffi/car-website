@@ -23,6 +23,10 @@
   +media-lib.breakpoint($br: media-lib.$md)
     gap: 4rem 8rem
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    grid-template-columns: repeat(6, max-content)
+
 .logos__img
   width: 40px
   transition: .3s
@@ -30,3 +34,7 @@
 
   &:hover
     opacity: 1
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 50px

@@ -1,6 +1,10 @@
 // Modules
 
+// plugins
 @use '../../plugins/plugins-dir' as plugins
+
+// media lib
+@use '../../base/media-lib'
 
 /* SHAPE
 
@@ -12,8 +16,16 @@
 .shape__big
   +plugins.size(400px)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.size(500px)
+
 .shape__small
   +plugins.size(300px)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.size(400px)
 
 .shape__smaller
   +plugins.size(180px)

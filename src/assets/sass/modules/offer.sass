@@ -24,6 +24,13 @@
     grid-template-rows: initial
     justify-content: center
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    grid-template-columns: repeat(2, 1fr)
+    align-items: center
+    column-gap: 5rem
+    +plugins.padding(null null 2rem)
+
 .offer__bg
   +plugins.size(100%)
   object-fit: cover
@@ -41,11 +48,24 @@
   +media-lib.breakpoint($br: media-lib.$sm)
     +plugins.margin(null null 4rem)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    text-align: initial
+    +plugins.margin(null null 0)
+
 .offer__title
   +plugins.margin(null null 2rem)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    text-align: initial
+
 .offer__description
   +plugins.margin(null null 3rem)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.padding(null 6rem null null)
 
 .offer__img
   max-width: initial
@@ -59,3 +79,7 @@
   // medium devices
   +media-lib.breakpoint($br: media-lib.$sm)
     +plugins.position(relative, null initial initial null)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 450px

@@ -34,6 +34,11 @@
   +media-lib.breakpoint($br: media-lib.$md)
     grid-template-columns: repeat(2, 1fr)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    grid-template-columns: repeat(4, max-content)
+    justify-content: space-between
+
 .footer__logo
   display: inline-flex
   align-items: center
@@ -48,19 +53,35 @@
   &:hover
     color: var(--first-color)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    column-gap: .5rem
+
 .footer__logo i
   font:
     size: 1.5rem
     weight: 500
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    font-size: 2rem
+
 .footer__title
   +plugins.margin(null null 1.25rem)
   font-size: var(--h3-font-size)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.margin(null null 1.5rem)
 
 .footer__links
   display: flex
   flex-direction: column
   row-gap: .5rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    row-gap: .75rem
 
 .footer__link,
 .footer__social-link
@@ -77,9 +98,18 @@
 .footer__social-link
   font-size: 1.25rem
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    font-size: 1.5rem
+
 .footer__copy
   display: block
   +plugins.margin(4.5rem null null)
   font-size: var(--smaller-font-size)
   color: var(--text-color-light)
   text-align: center
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.margin(8rem null null)
+    +plugins.padding(null null 1rem)

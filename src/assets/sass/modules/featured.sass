@@ -14,12 +14,21 @@
 .featured__container
   +plugins.padding(1rem null null)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.padding(1rem null 2.5rem)
+
 .featured__filters
   display: flex
   justify-content: center
   align-items: center
   column-gap: 1rem
   +plugins.margin(null null 3.5rem)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    column-gap: 2rem
+    +plugins.margin(null null 4.5rem)
 
 .featured__item
   +plugins.size(48px)
@@ -39,8 +48,16 @@
     span, img
       opacity: 1
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.size(52px)
+
 .featured__item img
   width: 1.5rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 2rem
 
 .featured__item span,
 .featured__item img
@@ -55,6 +72,11 @@
   // small devices
   +media-lib.breakpoint($br: media-lib.$sm)
     grid-template-columns: repeat(2, 228px)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    grid-template-columns: repeat(3, 248px)
+    gap: 4rem
 
 .featured__card
   +plugins.padding(2rem 1.5rem 1.5rem)

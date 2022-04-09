@@ -18,6 +18,11 @@
   +media-lib.breakpoint($br: media-lib.$md)
     grid-template-columns: repeat(2, 1fr)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    align-items: center
+    column-gap: 6rem
+
 .about__group
   position: relative
 
@@ -26,9 +31,17 @@
     width: 350px
     justify-self: center
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 480px
+
 .about__img
   width: 310px
   border-radius: .5rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 480px
 
 .about__card
   width: 180px
@@ -43,6 +56,11 @@
   +media-lib.breakpoint($br: media-lib.$xsm, $media-feature: 'max-width')
     width: 150px
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 198px
+    +plugins.padding(1rem 1.25rem)
+
 .about__card-title
   +plugins.margin(null null .5rem)
   font-size: var(--h3-font-size)
@@ -56,3 +74,8 @@
 
 .about__description
   +plugins.margin(null null 2rem)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.margin(null null 3rem)
+    +plugins.padding(null 4rem null null)

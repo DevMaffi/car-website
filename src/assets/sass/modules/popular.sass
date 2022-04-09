@@ -6,10 +6,18 @@
 // placeholders
 @use '../base/placeholders'
 
+// media lib
+@use '../base/media-lib'
+
 /* POPULAR
 
 .popular__container
   +plugins.padding(1rem null null)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 875px
+    +plugins.padding(3rem null null)
 
 .popular__card
   width: 238px
@@ -23,6 +31,12 @@
   &:hover
     .popular__img
       transform: translateY(-.25rem)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 258px
+    +plugins.margin(null null 5rem)
+    border-radius: 1.25rem
 
 .popular__card .shape__smaller
   +plugins.position(absolute, -2.5rem null null -2.5rem)
@@ -42,6 +56,11 @@
   width: 160px
   +plugins.margin(.75rem null 1.25rem 1.5rem)
   transition: .3s
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 180px
+    +plugins.margin(.75rem null 1.25rem 2rem)
 
 .popular__data
   display: grid

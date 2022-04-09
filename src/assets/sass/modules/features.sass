@@ -20,6 +20,10 @@
   justify-content: center
   +plugins.padding(2rem null null)
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    +plugins.padding(2rem null 3rem)
+
 .features__group
   display: grid
   position: relative
@@ -28,6 +32,10 @@
 .features__img
   justify-self: center
   width: 150px
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 200px
 
 .features__card
   width: 112px
@@ -39,17 +47,35 @@
 
   @extend %bg-blur
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 127px
+    +plugins.padding(.75rem 2.5rem)
+
 .features__card-1
   top: 4rem
   left: 1.5rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    left: -1rem
 
 .features__card-2
   top: 8rem
   right: 1rem
 
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    right: -2.5rem
+
 .features__card-3
   left: 1.5rem
   bottom: 2rem
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    left: -1rem
+    bottom: 7rem
 
 .features__card-title
   +plugins.margin(null null .25rem)
@@ -68,3 +94,8 @@
   +media-lib.breakpoint($br: media-lib.$sm)
     left: 50%
     transform: translateX(-50%) rotate(-22deg)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    width: 650px
+    top: 11rem

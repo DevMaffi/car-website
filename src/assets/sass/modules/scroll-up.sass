@@ -6,6 +6,9 @@
 // placeholders
 @use '../base/placeholders'
 
+// media lib
+@use '../base/media-lib'
+
 /* SCROLL UP
 
 .scroll-up
@@ -22,3 +25,7 @@
 
   &:hover
     transform: translateY(-.25rem)
+
+  // large devices
+  +media-lib.breakpoint($br: media-lib.$xl)
+    right: 3rem
