@@ -1,10 +1,10 @@
 // Modules
 
 // modules
-import Swiper, { Pagination } from 'swiper'
 import mixitup from 'mixitup'
+import Swiper, { Pagination } from 'swiper'
 
-import { handleScroll, handleMenu, handleBlur } from '@modules'
+import { handleScroll, handleMenu, handleBlur, applyReveal } from '@modules'
 
 // styles
 import 'swiper/css'
@@ -45,3 +45,7 @@ mixitup('.featured__content', {
     duration: 300,
   },
 })
+
+// Scroll reveal
+
+applyReveal()
