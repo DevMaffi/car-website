@@ -36,7 +36,6 @@ function applyReveal() {
 
   // features section
   sr.reveal('.features__img')
-  sr.reveal('.features__map', { delay: 600, origin: 'bottom' })
   sr.reveal('.features__card', { interval: 300 })
 
   // featured section
